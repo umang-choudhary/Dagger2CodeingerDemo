@@ -1,8 +1,8 @@
 package com.codeinger.exdagger.component;
 
-import com.codeinger.exdagger.model.Camera;
+import com.codeinger.exdagger.MainApplication;
+import com.codeinger.exdagger.MainFragment;
 import com.codeinger.exdagger.modules.CameraModule;
-import com.codeinger.exdagger.modules.SnapdragonModule;
 import com.codeinger.exdagger.scops.ApplicationScope;
 
 import javax.inject.Named;
@@ -16,10 +16,10 @@ public interface ApplicationComponent {
 
     ActivityComponent getActivityComponent();
 
-    Camera getCamera();
+    void injectApplication(MainApplication mainApplication);
 
     @Component.Builder
-    interface Builder{
+    interface Builder {
 
         @BindsInstance
         Builder setMp(@Named("megapixel") int megapixel);

@@ -21,7 +21,7 @@ public class SnapdragonModule {
     }
 
     @Provides
-    Proccessor getProccessor(Snapdragon snapdragon){
+    Proccessor getProcessor(Snapdragon snapdragon){
         return snapdragon;
     }
 

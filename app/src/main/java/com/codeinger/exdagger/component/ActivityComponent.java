@@ -1,11 +1,9 @@
 package com.codeinger.exdagger.component;
 
-import com.codeinger.exdagger.model.Battery;
+import com.codeinger.exdagger.MainActivity;
 import com.codeinger.exdagger.modules.BatteryModule;
-import com.codeinger.exdagger.modules.SnapdragonModule;
 import com.codeinger.exdagger.scops.ActivityScope;
 
-import dagger.Component;
 import dagger.Subcomponent;
 
 @ActivityScope
@@ -14,6 +12,6 @@ public interface ActivityComponent {
 
     FragmentComponent.Builder getFragmentComponentBuilder();
 
-    Battery getBattery();
+    void injectActivity(MainActivity mainActivity);
 
 }

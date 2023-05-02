@@ -1,5 +1,6 @@
 package com.codeinger.exdagger.component;
 
+import com.codeinger.exdagger.MainFragment;
 import com.codeinger.exdagger.model.MediaTek;
 import com.codeinger.exdagger.model.Mobile;
 import com.codeinger.exdagger.model.Proccessor;
@@ -18,11 +19,7 @@ import dagger.Subcomponent;
 @Subcomponent(modules = {MediaTekModule.class})
 public interface FragmentComponent {
 
-    Proccessor getProcessor();
-
-    Mobile getMobile();
-
-
+    void injectFragment(MainFragment mainFragment);
 
     @Subcomponent.Builder
     interface Builder{
@@ -33,9 +30,7 @@ public interface FragmentComponent {
         @BindsInstance
         Builder setCore(@Named("core") int core);
 
-
         FragmentComponent build();
-
     }
 
 }

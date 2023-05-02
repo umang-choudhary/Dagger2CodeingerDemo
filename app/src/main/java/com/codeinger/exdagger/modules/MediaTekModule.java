@@ -8,11 +8,10 @@ import dagger.Binds;
 import dagger.Module;
 
 @Module
-public abstract class MediaTekModule {
+public interface MediaTekModule {
 
     @FragmentScope
     @Binds
-    abstract Proccessor getPrccessor(MediaTek mediaTek);
-
+    Proccessor getProcessor(MediaTek mediaTek);
 
 }
